@@ -55,17 +55,11 @@
   <!-- CABEÇALHO / NAVBAR -->
   <header class="sticky top-0 z-50 bg-navyPortal-900/95 backdrop-blur-md border-b border-slate-800/80 shadow-md">
     <div class="max-w-5xl mx-auto px-6 lg:px-10">
-      <div class="flex items-center justify-between h-18">
+      <div class="flex items-center justify-between h-20">
         
-        <!-- LOGO & TÍTULO INSTITUCIONAL -->
-        <a href="#" class="flex items-center gap-2.5 focus:outline-none group">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-greenPortal via-navyPortal-800 to-orangePortal-500 p-0.5 shadow-md group-hover:scale-105 transition-transform">
-            <div class="w-full h-full bg-navyPortal-900 rounded-[10px] flex items-center justify-center">
-              <svg class="w-5 h-5 text-greenPortal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-              </svg>
-            </div>
-          </div>
+        <!-- LOGO & TÍTULO INSTITUCIONAL (BRASÃO DA CIDADE) -->
+        <a href="#" class="flex items-center gap-3 focus:outline-none group">
+          <img src="brasao_palmeira.png" alt="Brasão de Palmeira das Missões" class="h-11 w-auto object-contain transition-transform group-hover:scale-105">
           <div>
             <div class="font-extrabold text-base leading-tight tracking-tight text-white">
               Sala do Empreendedor
@@ -578,7 +572,7 @@
       </div>
     </section>
 
-    <!-- SEÇÃO DE ZONEAMENTO COM CONTATOS INSTITUCIONAIS SOLICITADOS -->
+    <!-- SEÇÃO DE ZONEAMENTO E CONTATOS -->
     <section id="zoneamento" class="py-12 bg-navyPortal-950 border-t border-slate-800/80">
       <div class="max-w-5xl mx-auto px-6 lg:px-10">
         
@@ -667,15 +661,20 @@
 
   </main>
 
-  <!-- RODAPÉ INSTITUCIONAL -->
-  <footer class="bg-navyPortal-950 border-t border-slate-800/80 py-6 text-slate-400 text-xs">
-    <div class="max-w-5xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row justify-between items-center gap-3">
+  <!-- RODAPÉ INSTITUCIONAL (COM LOGOS DA GESTÃO E SECRETARIA) -->
+  <footer class="bg-navyPortal-950 border-t border-slate-800/80 py-8 text-slate-400 text-xs">
+    <div class="max-w-5xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
       <div>
         <p class="text-white font-bold text-xs">Prefeitura Municipal de Palmeira das Missões - RS</p>
         <p class="mt-0.5 text-[11px]">Secretaria de Desenvolvimento Econômico, Inovação e Empregos</p>
+        <p class="text-[11px] mt-1">© 2026 Sala do Empreendedor. Todos os direitos reservados.</p>
       </div>
-      <div>
-        <p class="text-[11px]">© 2026 Sala do Empreendedor. Todos os direitos reservados.</p>
+
+      <!-- MARCAS / LOGOS EM BRANCO NO RODAPÉ -->
+      <div class="flex items-center gap-6 sm:gap-8">
+        <img src="logo_palmeira_branco.png" alt="Logo Prefeitura de Palmeira das Missões" class="h-10 sm:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity">
+        <div class="h-8 w-px bg-slate-800"></div>
+        <img src="logo_smde_branco.png" alt="Logo Secretaria de Desenvolvimento Econômico, Inovação e Empregos" class="h-10 sm:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity">
       </div>
     </div>
   </footer>
