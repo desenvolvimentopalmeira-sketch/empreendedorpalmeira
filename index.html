@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sala do Empreendedor | Prefeitura de Palmeira das Missões - RS</title>
-  
+
+  <!-- ÍCONE DA PÁGINA -->
+  <link rel="icon" type="image/png" href="selo_ouro.png">
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,16 +24,13 @@
             sans: ['Inter', 'sans-serif'],
           },
           colors: {
-            navyPortal: {
-              800: '#0b2a4a',
-              900: '#071f38',
-              950: '#041324',
-            },
-            orangePortal: {
-              500: '#d96b27',
-              600: '#ca5c17',
-            },
-            greenPortal: '#12a382'
+            smde: {
+              navy: '#1b1456',       /* Azul escuro da marca */
+              deep: '#2f2585',       /* Azul intermediário */
+              purple: '#7c52f2',     /* Roxo/Violeta */
+              cyan: '#28c7cb',       /* Ciano/Turquesa */
+              cyanHover: '#1eb1b5'
+            }
           }
         }
       }
@@ -42,52 +42,61 @@
       width: 8px;
     }
     ::-webkit-scrollbar-track {
-      background: #071f38;
+      background: #1b1456;
     }
     ::-webkit-scrollbar-thumb {
-      background: #d96b27;
+      background: #7c52f2;
       border-radius: 4px;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
   </style>
 </head>
-<body class="bg-navyPortal-900 text-slate-100 font-sans antialiased flex flex-col min-h-screen">
+<body class="bg-smde-navy text-slate-100 font-sans antialiased flex flex-col min-h-screen">
 
   <!-- CABEÇALHO / NAVBAR -->
-  <header class="sticky top-0 z-50 bg-navyPortal-900/95 backdrop-blur-md border-b border-slate-800/80 shadow-md">
+  <header class="sticky top-0 z-50 bg-smde-navy/95 backdrop-blur-md border-b border-smde-deep/60 shadow-lg">
     <div class="max-w-5xl mx-auto px-6 lg:px-10">
       <div class="flex items-center justify-between h-20">
-        
+
         <!-- LOGO & TÍTULO INSTITUCIONAL -->
         <a href="#" class="flex items-center gap-3 focus:outline-none group">
-          <img src="brasao_palmeira.png" alt="Brasão de Palmeira das Missões" class="h-11 w-auto object-contain transition-transform group-hover:scale-105">
+          <img src="selo_ouro.png" alt="Brasão de Palmeira das Missões" class="h-11 w-auto object-contain transition-transform group-hover:scale-105">
           <div>
             <div class="font-extrabold text-base leading-tight tracking-tight text-white">
               Sala do Empreendedor
             </div>
-            <div class="text-[11px] text-slate-400 font-medium">
+            <div class="text-[11px] text-slate-300 font-medium">
               Prefeitura de Palmeira das Missões
             </div>
           </div>
         </a>
 
         <!-- MENU DE NAVEGAÇÃO DESKTOP -->
-        <nav class="hidden md:flex items-center space-x-5 text-xs font-medium text-slate-300">
-          <a href="#inicio" class="hover:text-white transition-colors">Início</a>
-          <a href="#servicos" class="hover:text-white transition-colors">Serviços</a>
-          <a href="#microcredito" class="hover:text-white transition-colors">Microcrédito</a>
-          <a href="#zoneamento" class="hover:text-white transition-colors">Zoneamento</a>
-          <a href="#sobre" class="hover:text-white transition-colors">Sobre</a>
+        <nav class="hidden md:flex items-center space-x-5 text-xs font-medium text-slate-200">
+          <a href="#inicio" class="hover:text-smde-cyan transition-colors">Início</a>
+          <a href="#servicos" class="hover:text-smde-cyan transition-colors">Serviços</a>
+          <a href="#zoneamento" class="hover:text-smde-cyan transition-colors">Zoneamento</a>
+          <a href="#microcredito" class="hover:text-smde-cyan transition-colors">Microcrédito</a>
+          <a href="#aprender" class="hover:text-smde-cyan transition-colors">Aprender</a>
+          <a href="#sobre" class="hover:text-smde-cyan transition-colors">Sobre</a>
         </nav>
 
-        <!-- BOTÃO FALE CONOSCO -->
+        <!-- BOTÃO WHATSAPP NO CABEÇALHO -->
         <div class="hidden md:flex items-center">
-          <a href="https://wa.me/5555999999999?text=Olá,%20gostaria%20de%20atendimento%20da%20Sala%20do%20Empreendedor." target="_blank" rel="noopener noreferrer" class="px-5 py-2 rounded-xl bg-orangePortal-500 hover:bg-orangePortal-600 text-white font-bold text-xs shadow-md transition-all">
-            Fale Conosco
+          <a href="https://wa.me/5555999999999?text=Olá,%20gostaria%20de%20atendimento%20da%20Sala%20do%20Empreendedor." target="_blank" rel="noopener noreferrer" class="px-5 py-2 rounded-xl bg-smde-cyan hover:bg-smde-cyanHover text-slate-900 font-extrabold text-xs shadow-md transition-all flex items-center gap-2">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            WhatsApp
           </a>
         </div>
 
         <!-- HAMBURGER MOBILE -->
-        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-navyPortal-800 focus:outline-none">
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-200 hover:text-white hover:bg-smde-deep focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
 
@@ -95,15 +104,16 @@
     </div>
 
     <!-- MENU MOBILE -->
-    <div id="mobile-menu" class="hidden md:hidden bg-navyPortal-950 border-t border-slate-800 px-6 pt-4 pb-6 space-y-3">
-      <a href="#inicio" class="block text-slate-200 hover:text-white text-sm font-medium">Início</a>
-      <a href="#servicos" class="block text-slate-200 hover:text-white text-sm font-medium">Serviços</a>
-      <a href="#microcredito" class="block text-slate-200 hover:text-white text-sm font-medium">Microcrédito</a>
-      <a href="#zoneamento" class="block text-slate-200 hover:text-white text-sm font-medium">Zoneamento</a>
-      <a href="#sobre" class="block text-slate-200 hover:text-white text-sm font-medium">Sobre</a>
+    <div id="mobile-menu" class="hidden md:hidden bg-smde-navy border-t border-smde-deep px-6 pt-4 pb-6 space-y-3">
+      <a href="#inicio" class="block text-slate-200 hover:text-smde-cyan text-sm font-medium">Início</a>
+      <a href="#servicos" class="block text-slate-200 hover:text-smde-cyan text-sm font-medium">Serviços</a>
+      <a href="#zoneamento" class="block text-slate-200 hover:text-smde-cyan text-sm font-medium">Zoneamento</a>
+      <a href="#microcredito" class="block text-slate-200 hover:text-smde-cyan text-sm font-medium">Microcrédito</a>
+      <a href="#aprender" class="block text-slate-200 hover:text-smde-cyan text-sm font-medium">Aprender</a>
+      <a href="#sobre" class="block text-slate-200 hover:text-smde-cyan text-sm font-medium">Sobre</a>
       <div class="pt-2">
-        <a href="https://wa.me/5555999999999" target="_blank" class="block w-full py-2.5 bg-orangePortal-500 text-white font-bold text-center rounded-xl text-xs">
-          Fale Conosco
+        <a href="https://wa.me/5555999999999" target="_blank" class="block w-full py-2.5 bg-smde-cyan text-slate-900 font-extrabold text-center rounded-xl text-xs flex items-center justify-center gap-2">
+          WhatsApp
         </a>
       </div>
     </div>
@@ -111,64 +121,58 @@
 
   <main class="flex-grow">
 
-    <!-- HERO SECTION -->
-    <section id="inicio" class="py-10 lg:py-16 relative overflow-hidden">
+    <!-- 1. BLOCO: INÍCIO (HERO) -->
+    <section id="inicio" class="py-10 lg:py-16 relative overflow-hidden bg-gradient-to-b from-smde-navy via-smde-navy to-smde-deep/40">
       <div class="max-w-5xl mx-auto px-6 lg:px-10 relative z-10">
-        
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-navyPortal-800/80 border border-slate-700/60 text-xs text-slate-300 font-medium mb-6">
-          <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
-          <span>Atendimento: Seg a Sex — 08h às 14h</span>
+
+        <!-- TAG DE HORÁRIO DINÂMICO -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-smde-deep/80 border border-smde-purple/40 text-xs text-slate-200 font-medium mb-6">
+          <span id="status-dot" class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Atendimento: Seg a Sex — 07h às 13h</span>
+          <span id="status-badge" class="ml-1 px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400">Verificando...</span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
+
           <div class="lg:col-span-6 space-y-4">
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-none text-white">
               SALA DO <br>
-              <span class="text-greenPortal">EMPREENDEDOR</span>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-smde-cyan to-smde-purple">EMPREENDEDOR</span>
             </h1>
-            
+
             <h2 class="text-lg sm:text-xl font-bold text-slate-200">
-              Prefeitura de Palmeira das Missões
+              Palmeira das Missões
             </h2>
 
             <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-lg">
               Orientação gratuita, microcrédito, abertura de empresas, alvarás e muito mais — tudo num só lugar para o empreendedor palmeirense.
             </p>
-
-            <div class="pt-1 flex flex-wrap items-center gap-3">
-              <a href="#servicos" class="px-5 py-2.5 rounded-xl bg-orangePortal-500 hover:bg-orangePortal-600 text-white font-bold text-xs shadow-md transition-all">
-                Ver Serviços
-              </a>
-              <a href="https://wa.me/5555999999999?text=Olá,%20gostaria%20de%20agendar%20atendimento%20na%20Sala%20do%20Empreendedor." target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-navyPortal-800/80 hover:bg-navyPortal-800 text-slate-200 border border-slate-700 font-bold text-xs transition-all">
-                Agendar Atendimento
-              </a>
-            </div>
           </div>
 
+          <!-- CARDS DE ATALHO RÁPIDO (TODOS CLICÁVEIS) -->
           <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor" target="_blank" rel="noopener noreferrer" class="bg-navyPortal-800/90 hover:bg-navyPortal-800 p-5 rounded-2xl border border-slate-700/60 transition-all shadow-md hover:-translate-y-0.5 block">
-              <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-base mb-3">📱</div>
+            <a href="#servicos" class="bg-smde-deep/60 hover:bg-smde-deep/90 p-5 rounded-2xl border border-smde-purple/30 transition-all shadow-md hover:-translate-y-0.5 block group">
+              <div class="w-8 h-8 rounded-lg bg-smde-purple/20 text-smde-purple flex items-center justify-center text-base mb-3 group-hover:scale-110 transition-transform">📱</div>
               <h3 class="font-bold text-white text-sm">Serviços Digitais</h3>
-              <p class="text-slate-400 text-[11px] mt-0.5">Resolva com agilidade</p>
+              <p class="text-slate-300 text-[11px] mt-0.5">Resolva com agilidade</p>
             </a>
 
-            <a href="https://wa.me/5555999999999?text=Olá,%20gostaria%20de%20suporte%20e%20orientações%20da%20Sala%20do%20Empreendedor." target="_blank" rel="noopener noreferrer" class="bg-navyPortal-800/90 hover:bg-navyPortal-800 p-5 rounded-2xl border border-slate-700/60 transition-all shadow-md hover:-translate-y-0.5 block">
-              <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-base mb-3">🤝</div>
-              <h3 class="font-bold text-white text-sm">Orientações</h3>
-              <p class="text-slate-400 text-[11px] mt-0.5">Suporte especializado</p>
+            <a href="#zoneamento" class="bg-smde-deep/60 hover:bg-smde-deep/90 p-5 rounded-2xl border border-smde-purple/30 transition-all shadow-md hover:-translate-y-0.5 block group">
+              <div class="w-8 h-8 rounded-lg bg-smde-cyan/20 text-smde-cyan flex items-center justify-center text-base mb-3 group-hover:scale-110 transition-transform">🗺️</div>
+              <h3 class="font-bold text-white text-sm">Zoneamento</h3>
+              <p class="text-slate-300 text-[11px] mt-0.5">Consultas e regularização</p>
             </a>
 
-            <a href="#microcredito" class="bg-navyPortal-800/90 hover:bg-navyPortal-800 p-5 rounded-2xl border border-slate-700/60 transition-all shadow-md hover:-translate-y-0.5 block">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-base mb-3">💰</div>
+            <a href="#microcredito" class="bg-smde-deep/60 hover:bg-smde-deep/90 p-5 rounded-2xl border border-smde-purple/30 transition-all shadow-md hover:-translate-y-0.5 block group">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-base mb-3 group-hover:scale-110 transition-transform">💰</div>
               <h3 class="font-bold text-white text-sm">Microcrédito</h3>
-              <p class="text-slate-400 text-[11px] mt-0.5">Para o seu negócio</p>
+              <p class="text-slate-300 text-[11px] mt-0.5">Para o seu negócio</p>
             </a>
 
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-navyPortal-800/90 hover:bg-navyPortal-800 p-5 rounded-2xl border border-slate-700/60 transition-all shadow-md hover:-translate-y-0.5 block">
-              <div class="w-8 h-8 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center text-base mb-3">🏢</div>
-              <h3 class="font-bold text-white text-sm">Alvarás & Licenças</h3>
-              <p class="text-slate-400 text-[11px] mt-0.5">Regulamentação local</p>
+            <a href="#aprender" class="bg-smde-deep/60 hover:bg-smde-deep/90 p-5 rounded-2xl border border-smde-purple/30 transition-all shadow-md hover:-translate-y-0.5 block group">
+              <div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-base mb-3 group-hover:scale-110 transition-transform">📚</div>
+              <h3 class="font-bold text-white text-sm">Aprender</h3>
+              <p class="text-slate-300 text-[11px] mt-0.5">Cursos e capacitações</p>
             </a>
           </div>
 
@@ -177,54 +181,427 @@
       </div>
     </section>
 
-    <!-- SEÇÃO DE MICROCRÉDITO (ESPELHADA NA IMAGEM DE REFERÊNCIA) -->
+    <!-- 2. BLOCO: SERVIÇOS -->
+    <section id="servicos" class="py-12 bg-slate-50 text-slate-800 border-t border-slate-200">
+      <div class="max-w-5xl mx-auto px-6 lg:px-10">
+
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-smde-purple">Portal de Serviços</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-smde-navy mt-1">Serviços digitais e presenciais</h2>
+          <p class="text-slate-500 text-xs mt-2">
+            Selecione uma categoria e acesse os serviços disponíveis para empreendedores de Palmeira das Missões.
+          </p>
+        </div>
+
+        <!-- ABAS DE SERVIÇOS -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-6 no-scrollbar" id="service-tabs">
+          <button onclick="switchTab('mei', this)" class="tab-btn px-4 py-2 rounded-xl font-bold text-xs bg-smde-deep text-white shadow-sm transition-all whitespace-nowrap">MEI</button>
+          <button onclick="switchTab('alvara', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Alvará</button>
+          <button onclick="switchTab('jucisrs', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Junta Comercial</button>
+          <button onclick="switchTab('nfse', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Nota Fiscal</button>
+          <button onclick="switchTab('licitacoes', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Licitações</button>
+          <button onclick="switchTab('certidoes', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Certidões</button>
+          <!-- <button onclick="switchTab('tributos', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Tributos</button> -->
+          <!-- <button onclick="switchTab('vigilancia', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Vigilância & Meio Amb.</button>-->
+        </div>
+
+        <!-- TAB 1: MEI -->
+        <div id="tab-mei" class="tab-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <a href="http://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Identificacao" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-purple-100 text-smde-purple flex items-center justify-center text-sm mb-3">🖨️</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Imprimir Boleto Mensal (DAS)</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Emita o boleto mensal do MEI.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://mei.receita.economia.gov.br/certificado/consulta" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-cyan-100 text-smde-cyan flex items-center justify-center text-sm mb-3">📄</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Imprimir Certificado de MEI</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Gere o certificado CCMEI.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/quero-ser-mei" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm mb-3">☑️</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Formalize o MEI</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Abra seu MEI gratuitamente.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/dasnsimei.app/Identificacao" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm mb-3">📊</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Declaração Anual (DASN)</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Faça sua declaração anual.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/servicos-para-mei/atualizacao-cadastral-de-mei" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center text-sm mb-3">✏️</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Altere seus Dados CNPJ-MEI</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Atualize seus dados cadastrais.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://solucoes.receita.fazenda.gov.br/servicos/cnpjreva/cnpjreva_solicitacao.asp" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center text-sm mb-3">🖨️</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Imprima seu CNPJ</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Emita o comprovante de inscrição.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www8.receita.fazenda.gov.br/SimplesNacional/Servicos/Grupo.aspx?grp=19" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">💳</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Parcelamento do Simples Nacional</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Consulte débitos e parcele valores.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www8.receita.fazenda.gov.br/SimplesNacional/Servicos/Grupo.aspx?grp=18" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-sm mb-3">↩️</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Restituição de DAS Duplicado</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Solicite a restituição de pagamento duplicado.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/servicos-para-mei/baixa-de-mei" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center text-sm mb-3">❌</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Feche seu MEI</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Solicite a baixa do MEI.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-purple-100 text-smde-purple flex items-center justify-center text-sm mb-3">🧾</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Nota Fiscal de Serviço (NFSe)</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Acesse a emissão de NFSe para MEI.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <!-- EXCEÇÃO: APP MEI POSSUI DOIS LINKS SEPARADOS -->
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-teal-100 text-smde-cyan flex items-center justify-center text-sm mb-3">📱</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug">App MEI</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Aplicativo oficial do MEI.</p>
+            </div>
+            <div class="flex items-center gap-1.5 pt-1">
+              <a href="https://play.google.com/store/apps/details?id=br.gov.fazenda.receita.mei" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-[11px] font-bold text-smde-purple transition-colors">Android →</a>
+              <a href="https://apps.apple.com/br/app/mei/id1040521803" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-[11px] font-bold text-smde-purple transition-colors">iOS →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: ALVARÁ -->
+        <div id="tab-alvara" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <a href="https://palmeiradasmissoes.atende.net/autoatendimento/servicos/guias-de-issalvara/detalhar/1" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-cyan-100 text-smde-cyan flex items-center justify-center text-sm mb-3">🏢</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Emissão de Guias ISS/Alvará</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Guias para recolhimento das parcelas referentes ao Imposto Sobre Serviço (ISS).</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          
+        </div>
+
+        <!-- TAB 3: JUNTA COMERCIAL -->
+        <div id="tab-jucisrs" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <a href="https://www.jucisrs.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-purple-100 text-smde-purple flex items-center justify-center text-sm mb-3">🏛️</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Abertura de Empresas</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Registre sua empresa na Junta Comercial.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://tudofacilempresas.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-sm mb-3">⚡</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Tudo Fácil Empresas</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Sistema integrado de abertura de empresas.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://jucisrs.rs.gov.br/portal-de-servicos" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-cyan-100 text-smde-cyan flex items-center justify-center text-sm mb-3">🌐</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Portal de Serviços JUCISRS</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Consultas e registros da Junta Comercial.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+        </div>
+
+        <!-- TAB 4: NOTA FISCAL -->
+        <div id="tab-nfse" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <a href="https://www.nfse.gov.br/EmissorNacional/Login?ReturnUrl=%2fEmissorNacional" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-purple-100 text-smde-purple flex items-center justify-center text-sm mb-3">🧾</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Nota Fiscal de Serviços (NFSe)</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Emita e consulte notas fiscais de serviços.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://receita.fazenda.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-sm mb-3">📦</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Nota Fiscal de Mercadoria (NFe)</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Acesse o sistema estadual de NF-e.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+        </div>
+
+        <!-- TAB 5: LICITAÇÕES (COM CONTRATA+ BRASIL ADICIONADO) -->
+        <div id="tab-licitacoes" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <a href="https://palmeiradasmissoes.atende.net/autoatendimento/servicos/consulta-de-licitacoes/detalhar/1" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center text-sm mb-3">📢</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Licitações da Prefeitura</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Consulte processos licitatórios do município.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www.gov.br/compras/pt-br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-sm mb-3">🛒</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Portal Compras.gov.br</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Participe de compras públicas governamentais.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <!-- BLOCO CONTRATA+ BRASIL -->
+          <a href="https://www.gov.br/contratamaisbrasil/pt-br/conheca-o-contrata-brasil" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm mb-3">🤝</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Contrata+ Brasil</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Conecte sua empresa a oportunidades de contratação e fornecimento público.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+        </div>
+
+        <!-- TAB 6: CERTIDÕES -->
+        <div id="tab-certidoes" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <a href="https://servicos.receitafederal.gov.br/servico/certidoes/#/home" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm mb-3">📜</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">CND Federal (Receita / INSS)</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Certidão Negativa de Débitos Federais.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www.sefaz.rs.gov.br/sat/CertidaoSitFiscalSolic.aspx" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm mb-3">🏛️</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">CND Estadual (SEFAZ RS)</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Certidão Negativa de Débitos Estaduais.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://palmeiradasmissoes.atende.net/autoatendimento/servicos/certidao-negativa-de-debitos/detalhar/1" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">🏡</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">CND Municipal</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Emissão de certidões no município.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://consulta-crf.caixa.gov.br/consultacrf/pages/consultaEmpregador.jsf" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">💼</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Certidão FGTS</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Consulte a regularidade do FGTS.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www.tst.jus.br/certidao1" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">👷</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Certidão Trabalhista</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Emita a certidão de débitos trabalhistas.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www.tjrs.jus.br/novo/processos-e-servicos/servicos-processuais/emissao-de-antecedentes-e-certidoes/" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">⚖️</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Certidões Judiciais</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Certidões do Tribunal de Justiça do RS.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+        </div>
+
+        <!-- TAB 7: TRIBUTOS -->
+        <div id="tab-tributos" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-purple-100 text-smde-purple flex items-center justify-center text-sm mb-3">🪙</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Guias de ISSQN e Taxas</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Emissão de tributos municipais.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm mb-3">📄</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Parcelamento de Débitos Municipais</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Negociação e parcelamento de taxas.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+        </div>
+
+        <!-- TAB 8: VIGILÂNCIA & MEIO AMBIENTE -->
+        <div id="tab-vigilancia" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm mb-3">🩺</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Alvará Sanitário</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Vigilância Sanitária Municipal.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+
+          <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
+            <div>
+              <div class="w-8 h-8 rounded-lg bg-green-100 text-green-700 flex items-center justify-center text-sm mb-3">🌱</div>
+              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Licenciamento Ambiental</h3>
+              <p class="text-slate-500 text-[11px] mt-1">Secretaria do Meio Ambiente.</p>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+       <!-- 3. BLOCO: ZONEAMENTO E DOWNLOAD DE DOCUMENTOS -->
+    <section id="zoneamento" class="py-12 bg-smde-navy border-t border-smde-deep/80">
+      <div class="max-w-5xl mx-auto px-6 lg:px-10">
+        
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-smde-cyan">Consulta & Legislação</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Zoneamento e Planos Municipais</h2>
+          <p class="text-slate-300 text-xs mt-2">
+            Consulte a legislação vigente, a tabela de atividades permitidas e o mapa de zoneamento de Palmeira das Missões baixando os documentos oficiais abaixo.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          
+          <div class="bg-smde-deep/50 p-6 rounded-2xl border border-smde-purple/30 shadow-lg flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-smde-purple/20 text-smde-purple flex items-center justify-center text-lg mb-3">📄</div>
+              <h3 class="font-bold text-white text-sm">Anexos de Zoneamento (2023)</h3>
+              <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                Documento completo contendo as tabelas, diretrizes e regulamentações de uso e ocupação do solo do município.
+              </p>
+            </div>
+            
+            <a href="anexos_zoneamento_2023.pdf" download class="block w-full py-2.5 bg-smde-purple hover:bg-purple-600 text-white font-bold text-center rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+              <span>Baixar Anexos (PDF)</span>
+              <span>↓</span>
+            </a>
+          </div>
+
+          <div class="bg-smde-deep/50 p-6 rounded-2xl border border-smde-purple/30 shadow-lg flex flex-col justify-between space-y-4">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-smde-cyan/20 text-smde-cyan flex items-center justify-center text-lg mb-3">🗺️</div>
+              <h3 class="font-bold text-white text-sm">Mapa de Zoneamento Urbano</h3>
+              <p class="text-slate-300 text-xs mt-1 leading-relaxed">
+                Mapa oficial detalhado com a delimitação das zonas urbanas e comerciais de Palmeira das Missões.
+              </p>
+            </div>
+            
+            <a href="mapa_zoneamento.pdf" download class="block w-full py-2.5 bg-smde-cyan hover:bg-smde-cyanHover text-slate-900 font-extrabold text-center rounded-xl text-xs transition-all flex items-center justify-center gap-2">
+              <span>Baixar Mapa (PDF)</span>
+              <span>↓</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. BLOCO: MICROCRÉDITO -->
     <section id="microcredito" class="py-14 bg-slate-100 text-slate-800 border-t border-slate-200">
       <div class="max-w-5xl mx-auto px-6 lg:px-10">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          <!-- LADO ESQUERDO: TÍTULO, DESCRIÇÃO E CARDS DOS DOIS ATENDENTES -->
           <div class="lg:col-span-6 space-y-5">
             <div>
-              <span class="text-[11px] font-extrabold uppercase tracking-widest text-orangePortal-500">MICROCRÉDITO</span>
-              <h2 class="text-3xl sm:text-4xl font-extrabold text-navyPortal-900 leading-tight mt-1">
+              <span class="text-[11px] font-extrabold uppercase tracking-widest text-smde-purple">MICROCRÉDITO • PROGRAMA JURO ZERO</span>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-smde-navy leading-tight mt-1">
                 Crédito para o seu negócio crescer
               </h2>
             </div>
 
             <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              A Sala do Empreendedor de Palmeira das Missões oferece acesso ao microcrédito orientado em parceria com a <strong class="text-navyPortal-900">Instituição de Crédito / Programa Juro Zero</strong>. Agende uma consulta gratuita com os nossos agentes de crédito e descubra as melhores opções para a sua empresa.
+              O Programa Juro Zero em Palmeira das Missões é uma iniciativa da Prefeitura Municipal em parceria com a Imembuí Microfinanças. Agende uma consulta gratuita com os nossos agentes de crédito e descubra as opções para o seu negócio.
             </p>
 
-            <!-- CARD ATENDENTE 1 (GENÉRICO PARA EDITAR) -->
-            <div class="bg-amber-500/10 border border-amber-500/30 p-4 rounded-2xl space-y-2">
-              <div class="flex items-center gap-2 text-orangePortal-600 font-bold text-xs">
-                <span>📞 Agente de Crédito 1 — Agende seu atendimento</span>
+            <div class="bg-purple-50 border border-smde-purple/30 p-4 rounded-2xl space-y-2">
+              <div class="flex items-center gap-2 text-smde-purple font-bold text-xs">
+                <span>📞 Gisele</span>
               </div>
               <div>
-                <p class="font-bold text-navyPortal-900 text-xs">Nome do Atendente 1 <span class="font-normal text-slate-500">• Instituição / Parceira</span></p>
-                <p class="text-slate-600 text-[11px] mt-0.5">📱 (55) 99999-0001</p>
-                <p class="text-slate-600 text-[11px]">✉️ atendente1@instituicao.org.br</p>
+                <p class="font-bold text-smde-navy text-xs">📱 (55) 8145-1703 <span class="font-normal text-slate-500">• Imembuí Microfinanças</span></p>
+                
+                
               </div>
               <div class="pt-1">
-                <a href="https://wa.me/5555999990001?text=Olá,%20gostaria%20de%20agendar%20atendimento%20de%20Microcrédito." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-orangePortal-500 hover:bg-orangePortal-600 text-white font-bold text-xs shadow-sm transition-all">
+                <a href="https://wa.me/555581451703?text=Olá,%20gostaria%20de%20agendar%20atendimento%20de%20Microcrédito." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-smde-purple hover:bg-purple-600 text-white font-bold text-xs shadow-sm transition-all">
                   Enviar mensagem no WhatsApp →
                 </a>
               </div>
             </div>
 
-            <!-- CARD ATENDENTE 2 (GENÉRICO PARA EDITAR) -->
-            <div class="bg-amber-500/10 border border-amber-500/30 p-4 rounded-2xl space-y-2">
-              <div class="flex items-center gap-2 text-orangePortal-600 font-bold text-xs">
-                <span>📞 Agente de Crédito 2 — Agende seu atendimento</span>
+            <div class="bg-purple-50 border border-smde-purple/30 p-4 rounded-2xl space-y-2">
+              <div class="flex items-center gap-2 text-smde-purple font-bold text-xs">
+                <span>📞 Darielly</span>
               </div>
               <div>
-                <p class="font-bold text-navyPortal-900 text-xs">Nome do Atendente 2 <span class="font-normal text-slate-500">• Instituição / Parceira</span></p>
-                <p class="text-slate-600 text-[11px] mt-0.5">📱 (55) 99999-0002</p>
-                <p class="text-slate-600 text-[11px]">✉️ atendente2@instituicao.org.br</p>
+                <p class="font-bold text-smde-navy text-xs">📱 (55) 8136-0017 <span class="font-normal text-slate-500">• Imembuí Microfinanças</span></p>
+                
               </div>
               <div class="pt-1">
-                <a href="https://wa.me/5555999990002?text=Olá,%20gostaria%20de%20agendar%20atendimento%20de%20Microcrédito." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-orangePortal-500 hover:bg-orangePortal-600 text-white font-bold text-xs shadow-sm transition-all">
+                <a href="https://wa.me/555581360017?text=Olá,%20gostaria%20de%20agendar%20atendimento%20de%20Microcrédito." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-smde-purple hover:bg-purple-600 text-white font-bold text-xs shadow-sm transition-all">
                   Enviar mensagem no WhatsApp →
                 </a>
               </div>
@@ -232,37 +609,38 @@
 
           </div>
 
-          <!-- LADO DIREITO: 4 CARDS DE VANTAGENS (IGUAL AO ANEXO) -->
-          <div class="lg:col-span-6 space-y-3.5">
+          <div class="lg:col-span-6 flex flex-col space-y-3.5">
             
-            <div class="bg-white p-4.5 p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow">
-              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg shrink-0">💰</div>
+
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-xl bg-cyan-100 text-smde-cyan flex items-center justify-center text-lg shrink-0">💰</div>
               <div>
-                <h3 class="font-bold text-navyPortal-900 text-sm">Microcrédito Produtivo</h3>
-                <p class="text-slate-500 text-xs mt-0.5">Linhas de crédito para capital de giro, equipamentos e expansão.</p>
+                <h3 class="font-bold text-smde-navy text-sm">Programa Juro Zero</h3>
+                <p class="text-slate-500 text-xs mt-0.5">Valor do crédito: Até R$ 10.000 sem juros[cite: 1].</p>
               </div>
             </div>
 
-            <div class="bg-white p-4.5 p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow">
-              <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center text-lg shrink-0">🤝</div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-xl bg-purple-100 text-smde-purple flex items-center justify-center text-lg shrink-0">👥</div>
               <div>
-                <h3 class="font-bold text-navyPortal-900 text-sm">Consultoria Gratuita</h3>
+                <h3 class="font-bold text-smde-navy text-sm">Público-Alvo</h3>
+                <p class="text-slate-500 text-xs mt-0.5">MEIs, MEs e agroindústrias familiares (faturamento até R$ 360 mil/ano)[cite: 1, 2].</p>
+              </div>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-lg shrink-0">🤝</div>
+              <div>
+                <h3 class="font-bold text-smde-navy text-sm">Consultoria Gratuita</h3>
                 <p class="text-slate-500 text-xs mt-0.5">Orientação sobre a opção mais adequada para sua necessidade.</p>
               </div>
             </div>
 
-            <div class="bg-white p-4.5 p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow">
-              <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg shrink-0">⚡</div>
+            <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow">
+              <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-lg shrink-0">📈</div>
               <div>
-                <h3 class="font-bold text-navyPortal-900 text-sm">Processo Simplificado</h3>
-                <p class="text-slate-500 text-xs mt-0.5">Análise personalizada para microempreendedores.</p>
-              </div>
-            </div>
-
-            <div class="bg-white p-4.5 p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow">
-              <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-lg shrink-0">📈</div>
-              <div>
-                <h3 class="font-bold text-navyPortal-900 text-sm">Suporte ao Crescimento</h3>
+                <h3 class="font-bold text-smde-navy text-sm">Suporte ao Crescimento</h3>
                 <p class="text-slate-500 text-xs mt-0.5">Acompanhamento para você planejar o investimento.</p>
               </div>
             </div>
@@ -274,520 +652,263 @@
       </div>
     </section>
 
-    <!-- PORTAL DE SERVIÇOS -->
-    <section id="servicos" class="py-12 bg-slate-50 text-slate-800 border-t border-slate-200">
+    <!-- 5. BLOCO: APRENDER -->
+    <section id="aprender" class="py-12 bg-white text-slate-800 border-t border-slate-200">
       <div class="max-w-5xl mx-auto px-6 lg:px-10">
         
-        <div class="text-center max-w-xl mx-auto mb-8">
-          <span class="text-[11px] font-extrabold uppercase tracking-widest text-greenPortal">Portal de Serviços</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-navyPortal-900 mt-1">Serviços digitais e presenciais</h2>
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-amber-600">Capacitação & Conhecimento</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-smde-navy mt-1">Aprenda a fazer o seu negócio crescer</h2>
           <p class="text-slate-500 text-xs mt-2">
-            Selecione uma categoria e acesse os serviços disponíveis para empreendedores de Palmeira das Missões.
+            Cursos gratuitos, oficinas online, conteúdos Sebrae e guias práticos selecionados para alavancar a sua empresa.
           </p>
         </div>
 
-        <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-6 no-scrollbar" id="service-tabs">
-          <button onclick="switchTab('mei', this)" class="tab-btn px-4 py-2 rounded-xl font-bold text-xs bg-navyPortal-900 text-white shadow-sm transition-all whitespace-nowrap">MEI</button>
-          <button onclick="switchTab('alvara', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Alvará</button>
-          <button onclick="switchTab('jucisrs', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Junta Comercial</button>
-          <button onclick="switchTab('nfse', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Nota Fiscal</button>
-          <button onclick="switchTab('licitacoes', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Licitações</button>
-          <button onclick="switchTab('certidoes', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Certidões</button>
-          <button onclick="switchTab('tributos', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Tributos</button>
-          <button onclick="switchTab('vigilancia', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Vigilância & Meio Amb.</button>
-        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- 1. MEI -->
-        <div id="tab-mei" class="tab-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
+          <!-- CARD 1: SEBRAE EAD -->
+          <a href="https://sebrae.com.br/sites/PortalSebrae/cursosonline" target="_blank" rel="noopener noreferrer" class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md hover:border-amber-400 transition-all hover:-translate-y-0.5 group block">
             <div>
-              <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center text-sm mb-3">🖨️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Imprimir Boleto Mensal (DAS)</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Emita o boleto mensal do MEI.</p>
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-lg">🎓</div>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800">100% Gratuito</span>
+              </div>
+              <h3 class="font-extrabold text-smde-navy text-sm leading-snug group-hover:text-amber-600 transition-colors">Cursos Online Sebrae RS</h3>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                Acesse dezenas de cursos EAD com certificado digital sobre vendas, gestão, planejamento e finanças.
+              </p>
             </div>
-            <a href="http://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/pgmei.app/Identificacao" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center text-sm mb-3">📄</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Imprimir Certificado de MEI</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Gere o certificado CCMEI.</p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-amber-600 group-hover:underline">
+              <span>Acessar cursos EAD</span>
+              <span>→</span>
             </div>
-            <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/servicos-para-mei/certificado-de-comprovacao-de-mei" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm mb-3">☑️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Formalize o MEI</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Abra seu MEI gratuitamente.</p>
-            </div>
-            <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/quero-ser-mei" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm mb-3">📊</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Declaração Anual (DASN)</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Faça sua declaração anual.</p>
-            </div>
-            <a href="https://www8.receita.fazenda.gov.br/SimplesNacional/Aplicacoes/ATSPO/dasnsimei.app/Identificacao" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center text-sm mb-3">✏️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Altere seus Dados CNPJ-MEI</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Atualize seus dados cadastrais.</p>
-            </div>
-            <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/servicos-para-mei/atualizacao-cadastral-de-mei" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm mb-3">🖨️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Imprima seu CNPJ</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Emita o comprovante de inscrição.</p>
-            </div>
-            <a href="https://solucoes.receita.fazenda.gov.br/servicos/cnpjreva/cnpjreva_solicitacao.asp" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">💳</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Parcelamento do Simples Nacional</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Consulte débitos e parcele valores.</p>
-            </div>
-            <a href="http://www8.receita.fazenda.gov.br/SimplesNacional/Servicos/Grupo.aspx?grp=t&id=parc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-sm mb-3">↩️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Restituição de DAS Duplicado</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Solicite a restituição de pagamento duplicado.</p>
-            </div>
-            <a href="http://www8.receita.fazenda.gov.br/SimplesNacional/Servicos/Grupo.aspx?grp=t&id=rest" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center text-sm mb-3">❌</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Feche seu MEI</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Solicite a baixa do MEI.</p>
-            </div>
-            <a href="https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/servicos-para-mei/baixa-de-mei" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center text-sm mb-3">🧾</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Nota Fiscal de Serviço (NFSe)</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Acesse a emissão de NFSe para MEI.</p>
-            </div>
-            <a href="https://www.gov.br/nfse/pt-br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-sm mb-3">📱</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">App MEI</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Aplicativo oficial do MEI.</p>
-            </div>
-            <div class="flex items-center gap-1.5 pt-1">
-              <a href="https://play.google.com/store/apps/details?id=br.gov.fazenda.receita.mei" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-[11px] font-bold text-greenPortal transition-colors">Android →</a>
-              <a href="https://apps.apple.com/br/app/mei/id1018318042" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-[11px] font-bold text-greenPortal transition-colors">iOS →</a>
-            </div>
-          </div>
-        </div>
+          </a>
 
-        <!-- 2. ALVARÁ -->
-        <div id="tab-alvara" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
+          <!-- CARD 2: SEBRAE PLAY -->
+          <a href="https://sebraeplay.com.br" target="_blank" rel="noopener noreferrer" class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md hover:border-amber-400 transition-all hover:-translate-y-0.5 group block">
             <div>
-              <div class="w-8 h-8 rounded-lg bg-cyan-100 text-cyan-600 flex items-center justify-center text-sm mb-3">🏢</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Solicitar Alvará de Funcionamento</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Licença para abertura ou alteração do estabelecimento.</p>
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-lg">🎬</div>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-800">Vídeos & Pods</span>
+              </div>
+              <h3 class="font-extrabold text-smde-navy text-sm leading-snug group-hover:text-amber-600 transition-colors">Sebrae Play</h3>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                Vídeos curtos, podcasts e conteúdos práticos sobre empreendedorismo para assistir quando quiser.
+              </p>
             </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-sm mb-3">⏸️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Solicitar Inatividade</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Registre a inatividade do estabelecimento.</p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-amber-600 group-hover:underline">
+              <span>Assistir conteúdos</span>
+              <span>→</span>
             </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">▶️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Solicitar Reativação</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Reative sua inscrição municipal.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-sm mb-3">📋</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Solicitar Baixa da Inscrição</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Encerre a inscrição municipal.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center text-sm mb-3">🚫</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Cancelamento de Débitos e Baixa</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Solicite a baixa definitiva.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-yellow-100 text-yellow-600 flex items-center justify-center text-sm mb-3">📒</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Contabilistas Cadastrados</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Consulte a lista de contadores do município.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-        </div>
+          </a>
 
-        <!-- 3. JUNTA COMERCIAL -->
-        <div id="tab-jucisrs" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
+          <!-- CARD 3: ESCOLA VIRTUAL GOV.BR -->
+          <a href="https://www.escolavirtual.gov.br" target="_blank" rel="noopener noreferrer" class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md hover:border-amber-400 transition-all hover:-translate-y-0.5 group block">
             <div>
-              <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm mb-3">🏛️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Abertura de Empresas</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Registre sua empresa na Junta Comercial.</p>
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-lg">🏛️</div>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800">Governo Federal</span>
+              </div>
+              <h3 class="font-extrabold text-smde-navy text-sm leading-snug group-hover:text-amber-600 transition-colors">Escola Virtual Gov.br (EVG)</h3>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                Capacitações públicas gratuitas em gestão pública, licitações, inovação e desburocratização.
+              </p>
             </div>
-            <a href="https://www.jucisrs.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-sm mb-3">⚡</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Tudo Fácil Empresas</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Sistema integrado de abertura de empresas.</p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-amber-600 group-hover:underline">
+              <span>Acessar EVG</span>
+              <span>→</span>
             </div>
-            <a href="https://tudofacilempresas.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">🌐</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Portal de Serviços</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Consultas e registros da Junta Comercial.</p>
-            </div>
-            <a href="https://www.jucisrs.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-        </div>
+          </a>
 
-        <!-- 4. NOTA FISCAL -->
-        <div id="tab-nfse" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
+          <!-- CARD 4: MARKETING DIGITAL -->
+          <a href="https://sebrae.com.br/sites/PortalSebrae/cursosonline/como-vender-pela-internet,290ff2ca7e06a710VgnVCM100000d7012a0aRCRD" target="_blank" rel="noopener noreferrer" class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md hover:border-amber-400 transition-all hover:-translate-y-0.5 group block">
             <div>
-              <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center text-sm mb-3">🧾</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Nota Fiscal de Serviços (NFSe)</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Emita e consulte notas fiscais de serviços.</p>
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-100 text-smde-purple flex items-center justify-center text-lg">📲</div>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800">Vendas Online</span>
+              </div>
+              <h3 class="font-extrabold text-smde-navy text-sm leading-snug group-hover:text-amber-600 transition-colors">Marketing Digital & Redes Sociais</h3>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                Aprenda a divulgar sua empresa no Instagram, WhatsApp Business e Google Meu Negócio.
+              </p>
             </div>
-            <a href="https://www.gov.br/nfse/pt-br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-sm mb-3">📦</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Nota Fiscal de Mercadoria</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Acesse o sistema estadual de NF-e.</p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-amber-600 group-hover:underline">
+              <span>Aprender a vender online</span>
+              <span>→</span>
             </div>
-            <a href="https://receita.fazenda.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-        </div>
+          </a>
 
-        <!-- 5. LICITAÇÕES -->
-        <div id="tab-licitacoes" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
+          <!-- CARD 5: GESTÃO FINANCEIRA -->
+          <a href="https://sebrae.com.br/sites/PortalSebrae/cursosonline/gestao-financeira,f10ff2ca7e06a710VgnVCM100000d7012a0aRCRD" target="_blank" rel="noopener noreferrer" class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md hover:border-amber-400 transition-all hover:-translate-y-0.5 group block">
             <div>
-              <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center text-sm mb-3">📢</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Licitações da Prefeitura</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Consulte processos licitatórios do município.</p>
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-lg">💰</div>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">Finanças MEI</span>
+              </div>
+              <h3 class="font-extrabold text-smde-navy text-sm leading-snug group-hover:text-amber-600 transition-colors">Gestão Financeira & Fluxo de Caixa</h3>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                Domine a separação entre conta física e jurídica, controle custos e precifique produtos com lucro.
+              </p>
             </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">🛒</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Portal de Compras Públicas</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Participe de compras públicas.</p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-amber-600 group-hover:underline">
+              <span>Organizar finanças</span>
+              <span>→</span>
             </div>
-            <a href="https://www.portaldecompraspublicas.com.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm mb-3">📅</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Previsão Anual de Compras</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Consulte o planejamento de aquisições.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm mb-3">🇧🇷</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Contrata+ Brasil</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Oportunidades de contratação pública para MEIs e pequenas empresas.</p>
-            </div>
-            <a href="https://www.gov.br/compras/pt-br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-        </div>
+          </a>
 
-        <!-- 6. CERTIDÕES -->
-        <div id="tab-certidoes" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
+          <!-- CARD 6: COMPRAS PÚBLICAS -->
+          <a href="https://sebrae.com.br/sites/PortalSebrae/cursosonline/como-vender-para-o-governo,910ff2ca7e06a710VgnVCM100000d7012a0aRCRD" target="_blank" rel="noopener noreferrer" class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4 hover:shadow-md hover:border-amber-400 transition-all hover:-translate-y-0.5 group block">
             <div>
-              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">🏙️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Certidão Municipal</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Regularidade fiscal do município.</p>
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-10 h-10 rounded-xl bg-cyan-100 text-smde-cyan flex items-center justify-center text-lg">📑</div>
+                <span class="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-cyan-100 text-cyan-800">Licitações</span>
+              </div>
+              <h3 class="font-extrabold text-smde-navy text-sm leading-snug group-hover:text-amber-600 transition-colors">Como Vender para a Prefeitura</h3>
+              <p class="text-slate-500 text-xs mt-2 leading-relaxed">
+                Guia prático para MEI e pequenas empresas participarem de licitações e compras governamentais locais.
+              </p>
             </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center text-sm mb-3">🏛️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Certidão Estadual</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Regularidade fiscal do RS.</p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between text-xs font-bold text-amber-600 group-hover:underline">
+              <span>Acessar guia de licitações</span>
+              <span>→</span>
             </div>
-            <a href="https://receita.fazenda.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] font-bold mb-3">BR</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Certidão Federal</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Regularidade de tributos federais.</p>
-            </div>
-            <a href="https://solucoes.receita.fazenda.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-sm mb-3">💼</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Certidão FGTS</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Consulte a regularidade do FGTS.</p>
-            </div>
-            <a href="https://consulta-crf.caixa.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center text-sm mb-3">👷</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Certidão Trabalhista</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Emita a certidão de débitos trabalhistas.</p>
-            </div>
-            <a href="https://www.tst.jus.br/certidao" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm mb-3">⚖️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Certidões Judiciais</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Certidões do Tribunal de Justiça do RS.</p>
-            </div>
-            <a href="https://www.tjrs.jus.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-        </div>
+          </a>
 
-        <!-- 7. TRIBUTOS -->
-        <div id="tab-tributos" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center text-sm mb-3">🧾</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Guias de Recolhimento</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Consulte tributos e serviços municipais.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">💳</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Parcelamento de Tributos</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Regularize débitos municipais.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-sm mb-3">⚖️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Tributos Ajuizados</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Consulte serviços de débitos ajuizados.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center text-sm mb-3">🔄</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Reemissão de Guia</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Acesse orientações da Prefeitura.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center text-sm mb-3">📱</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Aplicativo CidadeMob</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Acesse serviços municipais pelo celular.</p>
-            </div>
-            <div class="flex items-center gap-1.5 pt-1">
-              <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-[11px] font-bold text-greenPortal transition-colors">Android →</a>
-              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-md bg-slate-100 hover:bg-slate-200 text-[11px] font-bold text-greenPortal transition-colors">iOS →</a>
-            </div>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-cyan-100 text-cyan-600 flex items-center justify-center text-sm mb-3">💻</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Declaração Eletrônica de ISS</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Faça a declaração de serviços.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-        </div>
-
-        <!-- 8. VIGILÂNCIA & MEIO AMB. -->
-        <div id="tab-vigilancia" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm mb-3">🌿</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Licenciamento Ambiental</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Acesse o portal ambiental.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center text-sm mb-3">🏥</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Alvará Sanitário</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Solicite o alvará sanitário.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
-          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md transition-shadow">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-600 flex items-center justify-center text-sm mb-3">🗺️</div>
-              <h3 class="font-bold text-navyPortal-900 text-xs leading-snug">Plano Diretor e Zoneamento</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Consulte a lei, a tabela de atividades e o mapa de zoneamento.</p>
-            </div>
-            <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-xs font-bold text-greenPortal hover:underline">Acessar serviço →</a>
-          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- SEÇÃO DE ZONEAMENTO E CONTATOS -->
-    <section id="zoneamento" class="py-12 bg-navyPortal-950 border-t border-slate-800/80">
+    <!-- 6. BLOCO: SOBRE / ATENDIMENTO PRESENCIAL (COM TELEFONE E WHATSAPP ADICIONADOS) -->
+    <section id="sobre" class="py-12 bg-smde-navy text-slate-100 border-t border-smde-deep/60">
       <div class="max-w-5xl mx-auto px-6 lg:px-10">
-        
-        <div class="text-center max-w-xl mx-auto mb-8">
-          <span class="text-[11px] font-extrabold uppercase tracking-widest text-greenPortal">Consulta & Regularização</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Zoneamento e Atendimento Setorial</h2>
-          <p class="text-slate-400 text-xs mt-2">
-            Consulte os canais de atendimento presencial e telefônico para orientações de zoneamento, viabilidade e regularização de pendências em Palmeira das Missões.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
-          <div class="bg-navyPortal-900 p-6 rounded-2xl border border-slate-800 shadow-lg flex flex-col justify-between space-y-4">
-            <div>
-              <div class="w-10 h-10 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center text-lg mb-3">🏢</div>
-              <h3 class="font-bold text-white text-sm">Setor de Cadastro e Arrecadação</h3>
-              <p class="text-slate-400 text-xs mt-0.5 font-medium">Secretaria da Fazenda — Prefeitura Municipal</p>
-              
-              <div class="mt-4 space-y-2 text-xs text-slate-300">
-                <p class="flex items-start gap-2">
-                  <span class="text-greenPortal font-bold">📍</span>
-                  <span>Praça Nassib Nassif, Centro, Palmeira das Missões - RS</span>
-                </p>
-                <p class="flex items-start gap-2">
-                  <span class="text-greenPortal font-bold">⏰</span>
-                  <span>Segunda a sexta-feira: 08h30min às 11h30min e 13h30min às 17h</span>
-                </p>
-                <p class="flex items-start gap-2">
-                  <span class="text-greenPortal font-bold">📞</span>
-                  <span>(55) 3191-0666 | <strong>Ramal 2010</strong></span>
-                </p>
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-[11px] font-extrabold uppercase tracking-widest text-smde-cyan">Sobre a Sala</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Atendimento presencial e simplificado</h2>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              A Sala do Empreendedor de Palmeira das Missões é um espaço único criado para orientar, desburocratizar e apoiar o micro e pequeno empreendedor na abertura, regularização e expansão de negócios.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
+              <div class="bg-smde-deep/60 p-4 rounded-xl border border-smde-purple/30">
+                <div class="font-bold text-smde-cyan flex items-center gap-1.5">📍 Endereço</div>
+                <div class="text-slate-300 mt-1 text-[11px]">Prefeitura Municipal — Palmeira das Missões - RS</div>
+              </div>
+              <div class="bg-smde-deep/60 p-4 rounded-xl border border-smde-purple/30">
+                <div class="font-bold text-smde-cyan flex items-center gap-1.5">🕒 Atendimento</div>
+                <div class="text-slate-300 mt-1 text-[11px]">Segunda a Sexta: 07h às 13h</div>
+              </div>
+              <div class="bg-smde-deep/60 p-4 rounded-xl border border-smde-purple/30">
+                <div class="font-bold text-smde-cyan flex items-center gap-1.5">📞 Telefone / Whats</div>
+                <div class="text-slate-300 mt-1 text-[11px] font-semibold">(55) 93618-7174</div>
+                
               </div>
             </div>
-            
-            <a href="https://wa.me/555531910666?text=Olá,%20gostaria%20de%20atendimento%20no%20Setor%20de%20Cadastro%20e%20Arrecadação." target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 bg-orangePortal-500 hover:bg-orangePortal-600 text-white font-bold text-center rounded-xl text-xs transition-all">
-              Contatar Setor →
-            </a>
           </div>
 
-          <div class="bg-navyPortal-900 p-6 rounded-2xl border border-slate-800 shadow-lg flex flex-col justify-between space-y-4">
-            <div>
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg mb-3">🗺️</div>
-              <h3 class="font-bold text-white text-sm">Secretaria do Planejamento</h3>
-              <p class="text-slate-400 text-xs mt-0.5 font-medium">Prefeitura Municipal de Palmeira das Missões</p>
-              
-              <div class="mt-4 space-y-2 text-xs text-slate-300">
-                <p class="flex items-start gap-2">
-                  <span class="text-greenPortal font-bold">📍</span>
-                  <span>Praça Nassib Nassif, Centro, Palmeira das Missões - RS</span>
-                </p>
-                <p class="flex items-start gap-2">
-                  <span class="text-greenPortal font-bold">⏰</span>
-                  <span>Segunda a sexta-feira: 08h às 11h30min e 13h30min às 17h</span>
-                </p>
-                <p class="flex items-start gap-2">
-                  <span class="text-greenPortal font-bold">📞</span>
-                  <span>(55) 3191-0666 | <strong>Ramal 2052</strong></span>
-                </p>
-              </div>
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="bg-smde-deep/80 p-6 rounded-2xl border border-smde-purple/40 text-center space-y-4 max-w-xs shadow-xl">
+              <img src="selo_ouro.png" alt="Selo Ouro Sebrae" class="h-24 mx-auto object-contain">
+              <h3 class="font-extrabold text-white text-sm">Selo Ouro de Referência em Atendimento</h3>
+              <p class="text-slate-300 text-[11px]">
+                Reconhecimento do Sebrae RS pela excelência na prestação de serviços aos empreendedores locais.
+              </p>
             </div>
-            
-            <a href="https://wa.me/555531910666?text=Olá,%20gostaria%20de%20atendimento%20na%20Secretaria%20do%20Planejamento." target="_blank" rel="noopener noreferrer" class="block w-full py-2.5 bg-orangePortal-500 hover:bg-orangePortal-600 text-white font-bold text-center rounded-xl text-xs transition-all">
-              Contatar Planejamento →
-            </a>
           </div>
 
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SEÇÃO SOBRE E SELO OURO -->
-    <section id="sobre" class="py-12 bg-navyPortal-900 border-t border-slate-800/80">
-      <div class="max-w-5xl mx-auto px-6 lg:px-10 text-center">
-        <div class="inline-block bg-amber-500/10 border border-amber-500/30 p-5 rounded-2xl max-w-lg mx-auto">
-          <span class="text-amber-400 font-bold text-xs tracking-wider uppercase">★ Selo Ouro de Referência Sebrae RS</span>
-          <p class="text-slate-300 text-[11px] mt-1.5 leading-relaxed">
-            Reconhecimento concedido ao atendimento da Sala do Empreendedor de Palmeira das Missões pela excelência, agilidade e suporte ao microempreendedor local.
-          </p>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- RODAPÉ INSTITUCIONAL -->
-  <footer class="bg-navyPortal-950 border-t border-slate-800/80 py-8 text-slate-400 text-xs">
-    <div class="max-w-5xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between items-center gap-6">
-      <div>
-        <p class="text-white font-bold text-xs">Prefeitura Municipal de Palmeira das Missões - RS</p>
-        <p class="mt-0.5 text-[11px]">Secretaria de Desenvolvimento Econômico, Inovação e Empregos</p>
-        <p class="text-[11px] mt-1">© 2026 Sala do Empreendedor. Todos os direitos reservados.</p>
+  <!-- RODAPÉ (COM LOGOS DA PREFEITURA E SMDE) -->
+  <footer class="bg-slate-950 text-slate-400 text-xs py-10 border-t border-slate-900">
+    <div class="max-w-5xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      
+      <!-- LOGOS INSTITUCIONAIS -->
+      <div class="flex items-center gap-6">
+        <img src="logo_palmeira_branco.png" alt="Brasão Prefeitura de Palmeira das Missões" class="h-12 w-auto object-contain hover:opacity-90 transition-opacity">
+        <div class="h-10 w-px bg-slate-800"></div>
+        <img src="logo_smde_branco.png" alt="Logo SMDE - Secretaria Municipal de Desenvolvimento Econômico" class="h-12 w-auto object-contain hover:opacity-90 transition-opacity">
       </div>
 
-      <div class="flex items-center gap-6 sm:gap-8">
-        <img src="logo_palmeira_branco.png" alt="Logo Prefeitura de Palmeira das Missões" class="h-10 sm:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity">
-        <div class="h-8 w-px bg-slate-800"></div>
-        <img src="logo_smde_branco.png" alt="Logo Secretaria de Desenvolvimento Econômico, Inovação e Empregos" class="h-10 sm:h-12 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity">
+      <!-- TEXTO DE COPYRIGHT E CONTATO -->
+      <div class="space-y-1">
+        <p class="font-bold text-white text-xs">Prefeitura Municipal de Palmeira das Missões - RS</p>
+        <p class="text-[11px] text-slate-400">Secretaria Municipal de Desenvolvimento Econômico, Inovação e Emprego</p>
+        <p class="text-[10px] text-slate-500 pt-1">Sala do Empreendedor &copy; 2026. Todos os direitos reservados.</p>
       </div>
+
+      <!-- VOLTAR AO TOPO -->
+      <div>
+        <a href="#inicio" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-smde-cyan border border-slate-800 text-[11px] font-semibold transition-colors">
+          <span>Voltar ao topo</span>
+          <span>↑</span>
+        </a>
+      </div>
+
     </div>
   </footer>
 
-  <!-- SCRIPT PARA TROCA DE ABAS -->
+  <!-- SCRIPTS DA PÁGINA -->
   <script>
-    function switchTab(category, btn) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+    // TROCA DE ABAS DE SERVIÇOS
+    function switchTab(tabId, btnElement) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(el => el.classList.add('hidden'));
 
-      document.querySelectorAll('.tab-btn').forEach(b => {
-        b.className = "tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap";
+      const activeContent = document.getElementById('tab-' + tabId);
+      if (activeContent) {
+        activeContent.classList.remove('hidden');
+      }
+
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-smde-deep', 'text-white', 'shadow-sm', 'font-bold');
+        btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200', 'hover:bg-slate-100', 'font-medium');
       });
 
-      const activeContent = document.getElementById(`tab-${category}`);
-      if(activeContent) activeContent.classList.remove('hidden');
-
-      btn.className = "tab-btn px-4 py-2 rounded-xl font-bold text-xs bg-navyPortal-900 text-white shadow-sm transition-all whitespace-nowrap";
+      btnElement.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200', 'hover:bg-slate-100', 'font-medium');
+      btnElement.classList.add('bg-smde-deep', 'text-white', 'shadow-sm', 'font-bold');
     }
 
-    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
+    // VERIFICADOR DE ATENDIMENTO AO VIVO (07:00 às 13:00)
+    function checkOperatingStatus() {
+      const now = new Date();
+      const day = now.getDay(); // 0 = Domingo, 6 = Sábado
+      const hour = now.getHours();
+
+      const dot = document.getElementById('status-dot');
+      const badge = document.getElementById('status-badge');
+
+      // Aberto de Segunda (1) a Sexta (5), das 07:00 às 12:59
+      const isOpen = (day >= 1 && day <= 5) && (hour >= 7 && hour < 13);
+
+      if (isOpen) {
+        dot.className = "w-2 h-2 rounded-full bg-emerald-500 animate-pulse";
+        badge.className = "ml-1 px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400";
+        badge.textContent = "Aberto Agora";
+      } else {
+        dot.className = "w-2 h-2 rounded-full bg-rose-500";
+        badge.className = "ml-1 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/20 text-rose-400";
+        badge.textContent = "Fechado Agora";
+      }
+    }
+
+    // MENU MOBILE TOGGLE
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // INICIALIZAÇÃO
+    checkOperatingStatus();
   </script>
 </body>
 </html>
