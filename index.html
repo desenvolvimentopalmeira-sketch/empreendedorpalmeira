@@ -84,6 +84,7 @@
           <a href="#zoneamento" class="hover:text-smde-cyan transition-colors">Zoneamento</a>
           <a href="#microcredito" class="hover:text-smde-cyan transition-colors">Microcrédito</a>
           <a href="#aprender" class="hover:text-smde-cyan transition-colors">Aprender</a>
+          <a href="#empregamais" class="hover:text-smde-cyan transition-colors">Emprega+</a>
           <a href="#sobre" class="hover:text-smde-cyan transition-colors">Sobre</a>
         </nav>
 
@@ -110,6 +111,7 @@
       <a href="#zoneamento" class="block text-slate-200 hover:text-smde-cyan text-sm font-medium">Zoneamento</a>
       <a href="#microcredito" class="block text-slate-200 hover:text-smde-cyan text-sm font-medium">Microcrédito</a>
       <a href="#aprender" class="block text-slate-200 hover:text-smde-cyan text-sm font-medium">Aprender</a>
+      <a href="#empregamais" class="block text-slate-200 hover:text-smde-cyan text-sm font-medium">Emprega+</a>
       <a href="#sobre" class="block text-slate-200 hover:text-smde-cyan text-sm font-medium">Sobre</a>
       <div class="pt-2">
         <a href="https://wa.me/5555936187174" target="_blank" class="block w-full py-2.5 bg-smde-cyan text-slate-900 font-extrabold text-center rounded-xl text-xs flex items-center justify-center gap-2">
@@ -201,8 +203,6 @@
           <button onclick="switchTab('nfse', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Nota Fiscal</button>
           <button onclick="switchTab('licitacoes', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Licitações</button>
           <button onclick="switchTab('certidoes', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Certidões</button>
-          <!-- <button onclick="switchTab('tributos', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Tributos</button> -->
-          <!-- <button onclick="switchTab('vigilancia', this)" class="tab-btn px-4 py-2 rounded-xl font-medium text-xs bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all whitespace-nowrap">Vigilância & Meio Amb.</button>-->
         </div>
 
         <!-- TAB 1: MEI -->
@@ -321,8 +321,6 @@
             </div>
             <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
           </a>
-
-          
         </div>
 
         <!-- TAB 3: JUNTA COMERCIAL -->
@@ -376,7 +374,7 @@
           </a>
         </div>
 
-        <!-- TAB 5: LICITAÇÕES (COM CONTRATA+ BRASIL ADICIONADO) -->
+        <!-- TAB 5: LICITAÇÕES -->
         <div id="tab-licitacoes" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           <a href="https://palmeiradasmissoes.atende.net/autoatendimento/servicos/consulta-de-licitacoes/detalhar/1" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
             <div>
@@ -396,7 +394,6 @@
             <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
           </a>
 
-          <!-- BLOCO CONTRATA+ BRASIL -->
           <a href="https://www.gov.br/contratamaisbrasil/pt-br/conheca-o-contrata-brasil" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
             <div>
               <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm mb-3">🤝</div>
@@ -464,52 +461,10 @@
           </a>
         </div>
 
-        <!-- TAB 7: TRIBUTOS -->
-        <div id="tab-tributos" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-purple-100 text-smde-purple flex items-center justify-center text-sm mb-3">🪙</div>
-              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Guias de ISSQN e Taxas</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Emissão de tributos municipais.</p>
-            </div>
-            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
-          </a>
-
-          <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center text-sm mb-3">📄</div>
-              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Parcelamento de Débitos Municipais</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Negociação e parcelamento de taxas.</p>
-            </div>
-            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
-          </a>
-        </div>
-
-        <!-- TAB 8: VIGILÂNCIA & MEIO AMBIENTE -->
-        <div id="tab-vigilancia" class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm mb-3">🩺</div>
-              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Alvará Sanitário</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Vigilância Sanitária Municipal.</p>
-            </div>
-            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
-          </a>
-
-          <a href="https://www.palmeiradasmissoes.rs.gov.br" target="_blank" rel="noopener noreferrer" class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3 hover:shadow-md hover:border-smde-purple/40 transition-all hover:-translate-y-0.5 group block">
-            <div>
-              <div class="w-8 h-8 rounded-lg bg-green-100 text-green-700 flex items-center justify-center text-sm mb-3">🌱</div>
-              <h3 class="font-bold text-smde-navy text-xs leading-snug group-hover:text-smde-purple transition-colors">Licenciamento Ambiental</h3>
-              <p class="text-slate-500 text-[11px] mt-1">Secretaria do Meio Ambiente.</p>
-            </div>
-            <span class="inline-flex items-center text-xs font-bold text-smde-purple group-hover:underline">Acessar serviço →</span>
-          </a>
-        </div>
-
       </div>
     </section>
 
-       <!-- 3. BLOCO: ZONEAMENTO E DOWNLOAD DE DOCUMENTOS -->
+    <!-- 3. BLOCO: ZONEAMENTO E DOWNLOAD DE DOCUMENTOS -->
     <section id="zoneamento" class="py-12 bg-smde-navy border-t border-smde-deep/80">
       <div class="max-w-5xl mx-auto px-6 lg:px-10">
         
@@ -582,8 +537,6 @@
               </div>
               <div>
                 <p class="font-bold text-smde-navy text-xs">📱 (55) 8145-1703 <span class="font-normal text-slate-500">• Imembuí Microfinanças</span></p>
-                
-                
               </div>
               <div class="pt-1">
                 <a href="https://wa.me/555581451703?text=Olá,%20gostaria%20de%20agendar%20atendimento%20de%20Microcrédito." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-smde-purple hover:bg-purple-600 text-white font-bold text-xs shadow-sm transition-all">
@@ -598,7 +551,6 @@
               </div>
               <div>
                 <p class="font-bold text-smde-navy text-xs">📱 (55) 8136-0017 <span class="font-normal text-slate-500">• Imembuí Microfinanças</span></p>
-                
               </div>
               <div class="pt-1">
                 <a href="https://wa.me/555581360017?text=Olá,%20gostaria%20de%20agendar%20atendimento%20de%20Microcrédito." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-smde-purple hover:bg-purple-600 text-white font-bold text-xs shadow-sm transition-all">
@@ -610,9 +562,6 @@
           </div>
 
           <div class="lg:col-span-6 flex flex-col space-y-3.5">
-            
-
-
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow">
               <div class="w-10 h-10 rounded-xl bg-cyan-100 text-smde-cyan flex items-center justify-center text-lg shrink-0">💰</div>
               <div>
@@ -620,7 +569,6 @@
                 <p class="text-slate-500 text-xs mt-0.5">Valor do crédito: Até R$ 10.000 sem juros para MEIs, MEs e agroindústrias familiares (faturamento até R$ 360 mil/ano)</p>
               </div>
             </div>
-
 
             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex items-start gap-4 hover:shadow-md transition-shadow">
               <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-lg shrink-0">🤝</div>
@@ -749,14 +697,52 @@
             </div>
           </a>
 
-          
-
         </div>
 
       </div>
     </section>
 
-    <!-- 6. BLOCO: SOBRE / ATENDIMENTO PRESENCIAL (COM TELEFONE E WHATSAPP ADICIONADOS) -->
+    <!-- 6. BLOCO: EMPREGA+ -->
+    <section id="empregamais" class="py-14 bg-gradient-to-br from-smde-deep to-smde-navy text-white border-t border-smde-purple/30">
+      <div class="max-w-5xl mx-auto px-6 lg:px-10">
+        <div class="bg-smde-navy/60 border border-smde-cyan/30 rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-8 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-smde-cyan/20 border border-smde-cyan/40 text-xs text-smde-cyan font-bold uppercase tracking-wider">
+                💼 Empregabilidade & Oportunidades
+              </div>
+              
+              <h2 class="text-3xl sm:text-4xl font-black text-white leading-tight">
+                Emprega+ <span class="text-smde-cyan">Palmeira das Missões</span>
+              </h2>
+
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Conecte seu perfil às melhores oportunidades de trabalho do município ou cadastre as vagas da sua empresa. Um ecossistema completo para aproximar talentos e empregadores locais.
+              </p>
+
+              <div class="pt-3">
+                <a href="https://palmeira-das-missoes.curriculointerativo.com.br/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-smde-cyan hover:bg-smde-cyanHover text-slate-900 font-extrabold text-sm shadow-lg hover:shadow-cyan-500/20 transition-all transform hover:-translate-y-0.5">
+                  <span>Acessar Portal Emprega+</span>
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="lg:col-span-4 flex justify-center">
+              <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-3xl bg-smde-cyan/10 border border-smde-cyan/30 flex items-center justify-center text-5xl sm:text-6xl shadow-inner">
+                🚀
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. BLOCO: SOBRE / ATENDIMENTO PRESENCIAL -->
     <section id="sobre" class="py-12 bg-smde-navy text-slate-100 border-t border-smde-deep/60">
       <div class="max-w-5xl mx-auto px-6 lg:px-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -779,7 +765,6 @@
               <div class="bg-smde-deep/60 p-4 rounded-xl border border-smde-purple/30">
                 <div class="font-bold text-smde-cyan flex items-center gap-1.5">📞 Telefone / Whats</div>
                 <div class="text-slate-300 mt-1 text-[11px] font-semibold">(55) 93618-7174</div>
-                
               </div>
             </div>
           </div>
@@ -800,17 +785,17 @@
 
   </main>
 
-  <!-- RODAPÉ (COM LOGOS DA PREFEITURA E SMDE) -->
+  <!-- RODAPÉ -->
   <footer class="bg-slate-950 text-slate-400 text-xs py-10 border-t border-slate-900">
     <div class="max-w-5xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
       
       <!-- LOGOS INSTITUCIONAIS -->
       <div class="flex items-center gap-6">
-          <img src="logo_palmeira_branco.png" alt="Brasão Prefeitura de Palmeira das Missões" class="h-12 w-auto object-contain hover:opacity-90 transition-opacity">
+        <img src="logo_palmeira_branco.png" alt="Brasão Prefeitura de Palmeira das Missões" class="h-12 w-auto object-contain hover:opacity-90 transition-opacity">
         <div class="h-10 w-px bg-slate-800"></div>
-          <img src="logo_smde_branco.png" alt="Logo SMDE - Secretaria Municipal de Desenvolvimento Econômico" class="h-12 w-auto object-contain hover:opacity-90 transition-opacity">
+        <img src="logo_smde_branco.png" alt="Logo SMDE - Secretaria Municipal de Desenvolvimento Econômico" class="h-12 w-auto object-contain hover:opacity-90 transition-opacity">
         <div class="h-10 w-px bg-slate-800"></div>
-          <img src="sala_logo_branco.png" alt="Logo Sala do Empreendedor" class="h-auto w-20 object-contain hover:opacity-90 transition-opacity">
+        <img src="sala_logo_branco.png" alt="Logo Sala do Empreendedor" class="h-auto w-20 object-contain hover:opacity-90 transition-opacity">
       </div>
 
       <!-- TEXTO DE COPYRIGHT E CONTATO -->
